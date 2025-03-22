@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="id"> 
+ <head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>AICHI - Jual Beli Diamond Lock</title> 
+  <link rel="stylesheet" href="styles.css"> 
+ </head> 
+ <body> 
+  <div id="toko" class="container"> 
+   <div class="box"> 
+    <h2>TOKO AICHI</h2> 
+    <p>JAM ONLINE SENIN-JUMAT 17:00-23.00 WIB</p> 
+    <p>JAM ONLINE SABTU-MINGGU 07:00-00:00 WIB</p> 
+   </div> 
+   <div class="box"> 
+    <h3>Diamond Lock</h3> 
+    <p>Take: <strong>Rp. 2,650</strong></p> 
+    <p>Price: <strong>Rp. 2,800</strong></p> <button onclick="bukaForm('Diamond Lock', 2800)">Beli</button> 
+   </div> 
+   <div class="box"> 
+    <h3>Blue Gem Lock</h3> 
+    <p>1 BGL = 100 DL</p> 
+    <p>HANYA <strong>Rp. 280,000</strong></p> <button onclick="bukaForm('Blue Gem Lock', 280000)">Beli</button> 
+   </div> 
+  </div> 
+  <div id="formulirPembelian" class="container" style="display: none;"> 
+   <div class="box"> 
+    <h2>Formulir Pembelian</h2> 
+    <p id="item-info"></p> <label for="jumlah">Total Beli:</label> 
+    <input type="number" id="jumlah" min="1" value="1" onchange="hitungTotal()"> 
+    <p>Total Harga: <span id="total-harga">Rp. 0</span></p> <label for="nama-world">Nama World:</label> 
+    <input type="text" id="nama-world"> <label for="owner-world">Owner World:</label> 
+    <input type="text" id="owner-world"> <label>Metode Pembayaran:</label> 
+    <div class="payment-options"> 
+     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwtRpAICKjKIeUmkSVYsuBa0Is2ILtR-gIqDAwtpITkEpoYe77eL_MkFeU&amp;s=10" id="dana" onclick="pilihPembayaran('Dana')"> 
+     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Logo_Gopay.svg/1200px-Logo_Gopay.svg.png" id="gopay" onclick="pilihPembayaran('Gopay')"> 
+     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJDkPNYo3s_p98viM1jjRvIk2_IgORfKZSabzqeRkwEZrmdZSfWq1ZgXiC&amp;s=10" id="ovo" onclick="pilihPembayaran('OVO')"> 
+     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRm0TbSaM-T7ukfbtG08nywKFYIrl5zobUp-lvZwwnTbiNKOUBoroPUTZcJ&amp;s=10" id="tree" onclick="pilihPembayaran('Tree')"> 
+     <img src="https://images.seeklogo.com/logo-png/39/2/quick-response-code-indonesia-standard-qris-logo-png_seeklogo-391791.png" id="qris" onclick="pilihPembayaran('Qris')"> 
+    </div> <button onclick="konfirmasiPembelian()">Konfirmasi</button> <button onclick="kembaliKeToko()">Kembali</button> 
+   </div> 
+  </div> 
+  <script src="script.js"></script> 
+ </body>
+</html>
